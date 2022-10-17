@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina secundara</title>
+    <script src="/javascripts/secondarypage.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/secodarypage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <button class="donate-button">
+                Donează
+            </button>
+        </div>
+        <img src="/images/logo.png" alt="brand-image">
+        <% if(locals.session.loggedIn){ %>
+            <div>
+                <form action=/auth/logout method="get">
+                    <button class="user-btns">Delogare</button>
+                </form>
+            </div>
+            
+        <% } else { %>
+            <div>
+                <button class="user-btns" onclick="window.location.href='/auth';" value="logIn">
+                    Logare
+                </button>
+                <button class="user-btns" onclick="window.location.href='/auth';" value="SignUp">
+                    înregistrare
+                </button>
+            </div>
+        <% } %>
+    </div>
+    <div class="nav">
+
+        <a href="#" class="burgir">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-content">
+            <ul>
+                <li><a href="/">Acasă</a></li>
+                <li><a href="/adopt">Adoptă</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Fă cunoștință cu pisicile și pisoii care în prezent așteaptă să fie adoptați.</h1>
+        <p>
+            Poți afla mai multe dând clic pe profilul lor. Îți vom explica cum sunt și de ce ar putea avea nevoie la
+            noua
+            lor casă.
+            Dacă crezi că ai putea oferi unei pisici dragostea pe care o merită, completează un formular de cerere
+            pentru a-ți exprima interesul.
+        </p>
+        <p>
+            Cererile sunt proecesate în ordinea venirii. De aseameanea, adopțiile sunt făcute după regula "primul venit,
+            primul serivit", așa că dacă ai
+            pus ochii pe o pisică, nu ezita să completează o cerere. Dacă simți nevoia, ne poți vizita oricând între
+            orele 12-18 ca să vezi o anumită pisică.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="/images/cat-to-adopt1.jpg" class="card-img" alt="card">
+            <div class="card-content">
+                <h2>Bobby</h2>
+                <ul>
+                    <li>Domestic Long Hair</li>
+                    <li>Băiat</li>
+                    <li>3 ani, 9 luni</li>
+                </ul>
+            </div>
+            <div class="card-info">
+                <button>Adoptă</button>
+                <div>
+                    <a href="#">Află mai mult</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <img src="/images/cat-to-adopt2.jpg" class="card-img" alt="card">
+            <div class="card-content">
+                <h2>Sissy</h2>
+                <ul>
+                    <li>Domestic Long Hair</li>
+                    <li>Fată</li>
+                    <li>3 ani</li>
+                </ul>
+            </div>
+            <div class="card-info">
+                <button>Adoptă</button>
+                <div>
+                    <a href="#">Află mai mult</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/images/cat-to-adopt3.jpg" class="card-img" alt="card">
+            <div class="card-content">
+                <h2>Oreo</h2>
+                <ul>
+                    <li>Domestic Long Hair</li>
+                    <li>Fată</li>
+                    <li>2 ani și 4 luni</li>
+                </ul>
+            </div>
+            <div class="card-info">
+                <button>Adoptă</button>
+                <div>
+                    <a href="#">Află mai mult</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/images/cat-to-adopt4.jpg" class="card-img" alt="card">
+            <div class="card-content">
+                <h2>Robert</h2>
+                <ul>
+                    <li>Domestic Long Hair</li>
+                    <li>Băiat</li>
+                    <li>1 ani</li>
+                </ul>
+            </div>
+            <div class="card-info">
+                <button>Adoptă</button>
+                <div>
+                    <a href="#">Află mai mult</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <div>
+                <p class="footer-title">
+                    CONTACT
+                </p>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-title">
+                    LINK-URI RAPIDE
+                </p>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-title">
+                    RESURSE
+                </p>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>
+                ©2022 De fapt n-am drepturi de copyright.
+            </p>
+            <div>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

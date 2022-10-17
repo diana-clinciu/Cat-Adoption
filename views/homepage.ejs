@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina de start</title>
+    <script src="/javascripts/homepage.js" async></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <button class="donate-button">
+                Donează
+            </button>
+        </div>
+        <img src="/images/logo.png" alt="brand-image">
+
+        <% if(locals.session.loggedIn){ %>
+            <div>
+                <form action=/auth/logout method="get">
+                    <button class="user-btns">Delogare</button>
+                </form>
+            </div>
+            
+        <% } else { %>
+            <div>
+                <button class="user-btns" onclick="window.location.href='/auth';" value="logIn">
+                    Logare
+                </button>
+                <button class="user-btns" onclick="window.location.href='/auth';" value="SignUp">
+                    înregistrare
+                </button>
+            </div>
+        <% } %>
+    </div>
+    <div class="nav">
+
+        <a href="#" class="burgir">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-content">
+            <ul>
+                <li><a href="/">Acasă</a></li>
+                <li><a href="/adopt">Adoptă</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="hero-text">
+            <p>Fă-ți un prieten</p>
+            <p>Salvează o pisică!</p>
+            <button onclick="window.location.href='/adopt';" >Adoptă acum!</button>
+        </div>
+    </div>
+    <div class="main">
+        <h1>AdopțiiPisici</h1>
+        <h1>Gasește o casă pentru fiecare pisicuță din 2020!</h1>
+        <p>Fondat de mai bine de doi ani, AdoptiiPisici ajuta zilnic pisici sa isi caute un loc calduros langa soba
+            (calorifer, dupa caz).
+            Multor dintre aceste pisici fie le-au murit stapanii, fie au fost abandonate pe strada.
+            Misiunea nostra este ca sa le gesim tuturor acestor pisici un stapan potrivit care sa aiba grija de ele si
+            sa le iubeasca.
+        </p>
+    </div>
+
+    <div class="main1">
+        <div class="col1">
+            <h1>1000</h1>
+            <p>pisici adoptate</p>
+        </div>
+        <div class="col2">
+            <h1>2000</h1>
+            <p>pisici salvate</p>
+        </div>
+        <div class="image">
+            <img src="/images/girl-and-cat.jpg" alt="happy girl with happy cat">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <div>
+                <p class="footer-title">
+                    CONTACT
+                </p>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-title">
+                    LINK-URI RAPIDE
+                </p>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-title">
+                    RESURSE
+                </p>
+                <ul>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <p id="clock"></p>
+        <div class="copyright">
+            <p>
+                ©2022 De fapt n-am drepturi de copyright..
+            </p>
+            <div>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

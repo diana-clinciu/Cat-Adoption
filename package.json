@@ -1,0 +1,20 @@
+{
+  "name": "catadoption",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.19",
+    "path": "^0.12.7"
+  }
+}
